@@ -8,6 +8,7 @@
     <% end %>
   </ul>
 <% end %>
+
 <%= form_with(model: @article, local: true) do |f| %>
   <div>
     <%= f.label :title %><br>
@@ -23,3 +24,9 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<div>
+  <%= link_to 'Show', article_path(@article) %>
+  <%= link_to 'Detete', @article, method: :delete, data: { confirm: "Are you sure?" } %>
+  <%= link_to 'Return to articles listing', articles_path %>
+</div>

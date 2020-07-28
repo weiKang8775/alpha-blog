@@ -14,7 +14,11 @@
       <th><%= article.description %></th>
       <th><%= link_to 'Show', article %></th>
       <th><%= link_to 'Edit', edit_article_path(article) %></th>
-      <th><%= link_to 'Delete', article, method: :delete %></th>
+      <th><%= link_to 'Delete', article, method: :delete, data: { confirm: "Are you sure?" } %></th>
     </tbody>
   <% end %>
 </table>
+
+<div>
+  <%= link_to 'Create new article', new_article_path %>
+</div>
