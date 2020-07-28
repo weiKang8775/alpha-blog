@@ -5,14 +5,16 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
-      <th>Actions</th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
   <% @articles.each do |article| %>
     <tbody>
       <th><%= article.title %></th>
       <th><%= article.description %></th>
-      <th>Placeholder</th>
+      <th><%= link_to 'Show', article %></th>
+      <th><%= link_to 'Edit', edit_article_path(article) %></th>
+      <th><%= link_to 'Delete', article, method: :delete %></th>
     </tbody>
   <% end %>
 </table>
