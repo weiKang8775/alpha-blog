@@ -28,7 +28,7 @@
   background-color: rgba(34, 34, 34, 0.6);
 }
 
-#section-home {
+.section-home {
   background-image: asset-url('hero-img.jpg');
   background-size: cover;
   background-position: center;
@@ -39,6 +39,15 @@
 #home-container p {
   font-size: 130%;
   font-weight: 100;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
 }
 
 #sticky-footer {
