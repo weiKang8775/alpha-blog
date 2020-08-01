@@ -1,14 +1,52 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+// primary color: #5a96f6
+// Secondary color: #4a8cf5
+
+
+/*------------------------------
+  UTILITY
+------------------------------*/
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active {
+  outline:0px !important;
+  -webkit-appearance:none;
+  box-shadow: none !important;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: ghostwhite;
+  overflow-x: hidden;
+}
+
+/*------------------------------
+  TEXT
+------------------------------*/
+
 h1 {
   letter-spacing: 2px;
 }
 
-#logo {
-  float: left;
-  font-size: 200%;
-  color: white;
-  text-transform: uppercase;
+.heading:after {
+  display: block;
+  height: 2px;
+  background-color: #5a96f6;
+  content: " ";
+  width: 100px;
+  margin: 20px auto;
 }
 
 .hero-text-box {
@@ -20,12 +58,24 @@ h1 {
   padding: 2%;
 }
 
+#home-container p {
+  font-size: 130%;
+  font-weight: 100;
+}
+
+.card-text {
+  line-height: 240%;
+}
+
+/*------------------------------
+  CONTAINER
+------------------------------*/
 
 .home-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -50%);
 }
 
 .home-container .jumbotron {
@@ -33,23 +83,89 @@ h1 {
 }
 
 .section-home {
-  background-image: asset-url('hero-img.jpg');
+  background: asset-url('hero-img.jpg') no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  height: 100vh;
-  background-attachment: fixed;
 }
 
-#home-container p {
-  font-size: 130%;
-  font-weight: 100;
+/*------------------------------
+  BUTTON
+------------------------------*/
+
+.btn-primary {
+  background-color: #5a96f6;
+  border: 1px solid #5a96f6;
+  transition: background-color 500 ms, border 500 ms, color 500ms;
 }
 
-html,
-body {
-  height: 100%;
-  background-color: ghostwhite;
-  overflow-x: hidden;
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: #4a8cf5;
+  border: 1px solid #4a8cf5;
+}
+
+.btn-outline-primary {
+  border: 1px solid #5a96f6;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active {
+  background-color: #4a8cf5;
+  border: 1px solid #4a8cf5;
+  transition: background-color 500 ms, border 500 ms, color 500ms;
+}
+
+.btn-custom:link,
+.btn-custom:visited {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 10px;
+  border: 1px solid #5a96f6;
+  border-radius: 200px;
+  transition: background-color 300ms, border 300ms, color 300ms;
+}
+
+.btn-custom:hover,
+.btn-custom:active {
+  background-color: #4a8cf5;
+  color: white;
+}
+
+/*------------------------------
+  LINK
+------------------------------*/
+
+.article-title:link,
+.article-title:visited {
+  text-decoration: none;
+  color: #5a96f6;
+  border-bottom: 1px solid #5a96f6;
+  transition: border-bottom 200ms, color 200ms;
+}
+
+.article-title:hover,
+.article-title:active {
+  // border-bottom: 1px solid #4a8cf5;
+  border-bottom: none;
+  color: #4a8cf5;
+}
+
+/*------------------------------
+  LIST ITEM
+------------------------------*/
+
+li {
+  list-style: none;
+}
+
+/*------------------------------
+  MISC
+------------------------------*/
+
+#logo {
+  float: left;
+  font-size: 200%;
+  color: white;
+  text-transform: uppercase;
 }
 
 #page-content {
@@ -63,16 +179,4 @@ body {
 .card-header,
 .card-footer {
   background-color: #2b3036;
-}
-
-.btn-primary {
-  background-color: #5a96f6;
-  border: 1px solid #5a96f6;
-  transition: background-color 100ms, border 100ms;
-}
-
-.btn-primary:hover,
-.btn-primary:active {
-  background-color: #4a8cf5;
-  border: 1px solid #4a8cf5;
 }
