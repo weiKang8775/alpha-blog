@@ -1,6 +1,6 @@
 <div class="row">
   <div class="container col-8">
-    <%= render 'shared/error' %>
+    <%= render 'shared/error', obj: @article %>
     <%= form_with(model: @article, local: true) do |f| %>
       <div class="form-group">
         <%= f.label :title %>
