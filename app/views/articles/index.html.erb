@@ -4,7 +4,15 @@
   <%= link_to 'Create new article', new_article_path, class: "btn-custom my-3 justify-content-md-center" %>
 </div>
 
+<div class="flickr_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div>
+
 <%= render 'articles', articles: @articles %>
+
+<div class="flickr_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div>
 
 <div class="row justify-content-center">
   <%= link_to 'Create new article', new_article_path, class: "btn-custom mt-3 mb-4 justify-content-md-center" %>
