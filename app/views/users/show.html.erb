@@ -1,14 +1,19 @@
 <h1 class="heading text-center mt-3 display-4"><%= @user.username %></h1>
 <%= gravatar_for(@user, 200) %>
-<div class="row justify-content-center">
-  <%= link_to "Edit Profile", edit_user_path(@user), class: "btn-lg btn-outline-primary mt-4 mb-3" %>
-</div>
+
+<% if logged_in? && @user == current_user %>
+  <div class="row justify-content-center">
+    <%= link_to "Edit Profile", edit_user_path(@user), class: "btn-lg btn-outline-primary mt-4 mb-3" %>
+  </div>
+<% end %>
 
 <h2 class="text-center mt-3 display-4">Articles</h2>
 
-<div class="row justify-content-center">
-  <%= link_to 'Create new article', new_article_path, class: "btn-custom my-3 justify-content-md-center" %>
-</div>
+<% if logged_in? %>
+  <div class="row justify-content-center">
+    <%= link_to 'Create new article', new_article_path, class: "btn-custom my-3 justify-content-md-center" %>
+  </div>
+<% end %>
 
 <div class="flickr_pagination">
   <%= will_paginate @articles, :container => false %>
@@ -20,6 +25,8 @@
   <%= will_paginate @articles, :container => false %>
 </div>
 
-<div class="row justify-content-center">
-  <%= link_to 'Create new article', new_article_path, class: "btn-custom my-3 justify-content-md-center" %>
-</div>
+<% if logged_in? && @user.articles.count > 0 %>
+  <div class="row justify-content-center">
+    <%= link_to 'Create new article', new_article_path, class: "btn-custom my-3 justify-content-md-center" %>
+  </div>
+<% end %>
