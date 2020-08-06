@@ -3,11 +3,13 @@
 
 <% if logged_in? && @user == current_user %>
   <div class="row justify-content-center">
-    <%= link_to "Edit Profile", edit_user_path(@user), class: "btn-lg btn-outline-primary mt-4 mb-3" %>
+    <%= link_to "Edit Profile", edit_user_path(@user), class: "btn-lg btn-outline-primary mt-4" %>
   </div>
-  <div class="row justify-content-center">
-    <%= link_to "Delete Account", user_path(@user), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure? (All your articles will also be deleted)"} %>
-  </div>
+<% end %>
+<% if logged_in? && (@user == current_user || current_user.admin?) %>
+<div class="row justify-content-center">
+  <%= link_to "Delete Account", user_path(@user), class: "btn btn-outline-danger mt-4", method: :delete, data: {confirm: "Are you sure? (All your articles will also be deleted)"} %>
+</div>
 <% end %>
 
 <h2 class="text-center mt-3 display-4">Articles</h2>
