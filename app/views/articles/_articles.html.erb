@@ -7,6 +7,9 @@
         </div>
         <div class="card-body">
           <h5 class="card-title"><%= link_to article.title, article_path(article), class: "article-title" %></h5>
+          <% article.categories.each do |category| %>
+            <%= link_to category.name, category_path(category), class: "card-title badge badge-pill badge-primary" %>
+          <% end %>
           <p class="card-text"><%= truncate(article.description, length: 100) %></p>
           <%= link_to "View", article_path(article), class: "btn btn-primary mx-1" %>
           <% if logged_in? && (article.user == current_user || current_user.admin?) %>

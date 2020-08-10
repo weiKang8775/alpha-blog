@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="container col-6">
+    <%= render 'shared/error', obj: @category %>
+    <%= form_with(model: @category, local: true) do |f| %>
+      <div class="form-group">
+        <%= f.label :name, "Category Name" %>
+        <%= f.text_field :name, class: "form-control", placeholder: "Choose a name", required: "true" %>
+      </div>
+      <%= f.submit  class: "btn btn-outline-primary mr-2 d-inline-block" %>
+      <%= link_to 'Cancel', categories_path, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

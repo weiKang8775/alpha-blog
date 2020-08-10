@@ -6,8 +6,17 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Articles
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "View Articles", articles_path, class: "dropdown-item" %>
+          <%= link_to "Write Article", new_article_path, class: "dropdown-item" if logged_in? %>
+        </div>
+      </li>
       <li class="nav-item">
-        <%= link_to "Articles", articles_path, class: "nav-link" %>
+        <%= link_to "Categories", categories_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
         <%= link_to "Bloggers", users_path, class: "nav-link" %>

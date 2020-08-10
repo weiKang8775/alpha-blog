@@ -7,6 +7,9 @@
       </div>
       <div class="card-body">
         <h5 class="card-title"><%= link_to @article.title, article_path(@article), class: "article-title" %></h5>
+        <% @article.categories.each do |category| %>
+          <%= link_to category.name, category_path(category), class: "card-title badge badge-pill badge-primary" %>
+        <% end %>
         <p class="card-text text-left"><%= @article.description %></p>
       </div>
       <div class="card-footer text-muted">
