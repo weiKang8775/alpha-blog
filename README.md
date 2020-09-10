@@ -1,11 +1,11 @@
 # Alpha Blog
 
-This application was created for educational purposes.
+This application was created for educational purposes.  
 Alpha blog is an online blogging website.
 
 ## Version
 
-Ruby 2.6.6p146
+Ruby 2.6.6p146  
 Rails 6.0.3.2
 
 ## Installation
