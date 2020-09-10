@@ -1,24 +1,28 @@
-# README
+# Alpha Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Alpha blog is an online blogging website created for the purposes of learning Ruby on Rails.
 
-Things you may want to cover:
+## Version
 
-* Ruby version
+Ruby 2.6.6p146
+Rails 6.0.3.2
 
-* System dependencies
+## Installation
 
-* Configuration
+Download the repository and unzip.
 
-* Database creation
+## Deployment instructions
 
-* Database initialization
+From the terminal, navigate to the repository and run
 
-* How to run the test suite
+```bash
+rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Then, start the rails server using
 
-* Deployment instructions
+```bash
+rails s
+```
 
-* ...
+Finally, view the application from your browser at `localhost:3000`
