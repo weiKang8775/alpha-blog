@@ -1,6 +1,7 @@
 # Alpha Blog
 
-Alpha blog is an online blogging website created for the purposes of learning Ruby on Rails.
+This application was created for educational purposes.
+Alpha blog is an online blogging website.
 
 ## Version
 
